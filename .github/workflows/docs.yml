@@ -1,0 +1,27 @@
+name: Documentation CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    concurrency: ci-${{ github.ref }}
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - uses: dlang-community/setup-dlang@v1
+      with:
+        compiler: dmd-latest
+    - name: Build docs
+      run: dub build --build=ddox
+    - name: Deploy documentation
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: docs

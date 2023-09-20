@@ -1,0 +1,22 @@
+{
+	"authors": [
+		"https://github.com/Rorkh"
+	],
+	"copyright": "Copyright © 2023, Rorkh",
+	"dependencies": {
+		"glib-d": {
+			"repository": "git+https://github.com/rtbo/glib-d",
+			"version": "27f1751"
+		}
+	},
+	"description": "libnotify wrapper for D",
+	"libs": [
+		"notify"
+	],
+	"license": "proprietary",
+	"name": "libnotify-d",
+	"-ddoxFilterArgs": [
+		"--unittest-examples",
+		"--min-protection=Protected"
+	]
+}
