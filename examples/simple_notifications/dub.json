@@ -1,0 +1,11 @@
+{
+	"name": "simple_notifications",
+    "description": "Simple notifications example",
+    "authors": ["https://github.com/Rorkh"],
+    "copyright": "Copyright © 2023, Rorkh",
+	"dependencies": {
+		"libnotify-d": {
+			"path": "../.."
+		}
+	}
+}

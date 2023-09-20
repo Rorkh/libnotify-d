@@ -1,0 +1,8 @@
+{
+	"fileVersion": 1,
+	"versions": {
+		"glib-d": {"version":"27f1751","repository":"git+https://github.com/rtbo/glib-d"},
+		"gtk-d": "3.10.0",
+		"libnotify-d": {"path":"../.."}
+	}
+}

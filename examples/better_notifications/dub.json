@@ -1,0 +1,14 @@
+{
+	"authors": [
+		"https://github.com/Rorkh"
+	],
+	"copyright": "Copyright © 2023, Rorkh",
+	"dependencies": {
+		"gtk-d": "~>3.10.0",
+		"libnotify-d": {
+			"path": "../.."
+		}
+	},
+	"description": "Better notifications example",
+	"name": "better_notifications"
+}
