@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Module libnotify.notification</title>
+		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
+		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../scripts/jquery.js">/**/</script><script type="text/javascript" src="../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view ">
+					<div class="package ">
+						<a href="../libnotify.html">libnotify</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module selected">
+						<a href="../libnotify/notification.html">notification</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../libnotify/notify.html">notify</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Module libnotify.notification</h1><p></p>
+			<section></section>
+			<section>
+				<h2>Functions</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="notify_notification_add_action" class="public" href="../libnotify/notification/notify_notification_add_action.html">notify_notification_add_action</a><span class="tableEntryAnnotation">(notification, action, label, callback, user_data, free_func)</span>
+							</code>
+						</td>
+						<td>Adds an action to a notification. When the action is invoked, the specified callback function will be called, along with the value passed to user_data.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="notify_notification_clear_actions" class="public" href="../libnotify/notification/notify_notification_clear_actions.html">notify_notification_clear_actions</a><span class="tableEntryAnnotation">(notification)</span>
+							</code>
+						</td>
+						<td>Clears all actions from the notification.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="notify_notification_clear_hints" class="public" href="../libnotify/notification/notify_notification_clear_hints.html">notify_notification_clear_hints</a><span class="tableEntryAnnotation">(notification)</span>
+							</code>
+						</td>
+						<td>Clears all hints from the notification.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="notify_notification_close" class="public" href="../libnotify/notification/notify_notification_close.html">notify_notification_close</a><span class="tableEntryAnnotation">(notification, error)</span>
+							</code>
+						</td>
+						<td>Synchronously tells the notification server to hide the notification on the screen.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="notify_notification_get_closed_reason" class="public" href="../libnotify/notification/notify_notification_get_closed_reason.html">notify_notification_get_closed_reason</a><span class="tableEntryAnnotation">(notification)</span>
+							</code>
+						</td>
+						<td>Returns the closed reason code for the notification. This is valid only after the "closed" signal is emitted.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="notify_notification_new" class="public" href="../libnotify/notification/notify_notification_new.html">notify_notification_new</a><span class="tableEntryAnnotation">(summary, body, icon)</span>
+							</code>
+						</td>
+						<td>Creates a new NotifyNotification. The summary text is required, but all other parameters are optional.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="notify_notification_set_app_name" class="public" href="../libnotify/notification/notify_notification_set_app_name.html">notify_notification_set_app_name</a><span class="tableEntryAnnotation">(notification, app_name)</span>
+							</code>
+						</td>
+						<td>Sets the application name for the notification. If this function is not called or if app_name is null, the application name will be set from the value used in notify_init() or overridden with notify_set_app_name().
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="notify_notification_set_category" class="public" href="../libnotify/notification/notify_notification_set_category.html">notify_notification_set_category</a><span class="tableEntryAnnotation">(notification, category)</span>
+							</code>
+						</td>
+						<td>Sets the category of this notification. This can be used by the notification server to filter or display the data in a certain way.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="notify_notification_set_hint" class="public" href="../libnotify/notification/notify_notification_set_hint.html">notify_notification_set_hint</a><span class="tableEntryAnnotation">(notification, key, value)</span>
+							</code>
+						</td>
+						<td>Sets a hint for key with value value . If value is NULL, a previously set hint for key is unset.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="notify_notification_set_timeout" class="public" href="../libnotify/notification/notify_notification_set_timeout.html">notify_notification_set_timeout</a><span class="tableEntryAnnotation">(notification, timeout)</span>
+							</code>
+						</td>
+						<td>Sets the timeout of the notification. To set the default time, pass NOTIFY_EXPIRES_DEFAULT as timeout . To set the notification to never expire, pass NOTIFY_EXPIRES_NEVER.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="notify_notification_set_urgency" class="public" href="../libnotify/notification/notify_notification_set_urgency.html">notify_notification_set_urgency</a><span class="tableEntryAnnotation">(notification, urgency)</span>
+							</code>
+						</td>
+						<td>Sets the urgency level of this notification.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="notify_notification_show" class="public" href="../libnotify/notification/notify_notification_show.html">notify_notification_show</a><span class="tableEntryAnnotation">(notification, error)</span>
+							</code>
+						</td>
+						<td>Tells the notification server to display the notification on the screen.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="notify_notification_update" class="public" href="../libnotify/notification/notify_notification_update.html">notify_notification_update</a><span class="tableEntryAnnotation">(notification, summary, body, icon)</span>
+							</code>
+						</td>
+						<td>Updates the notification text and icon. This won't send the update out and display it on the screen. For that, you will need to call notify_notification_show().
+</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Structs</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="NotifyNotification" class="public" href="../libnotify/notification/NotifyNotification.html">NotifyNotification</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="NotifyNotificationClass" class="public" href="../libnotify/notification/NotifyNotificationClass.html">NotifyNotificationClass</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="NotifyNotificationPrivate" class="public" href="../libnotify/notification/NotifyNotificationPrivate.html">NotifyNotificationPrivate</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Enums</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="NotifyUrgency" class="public" href="../libnotify/notification/NotifyUrgency.html">NotifyUrgency</a>
+							</code>
+						</td>
+						<td>The urgency level of the notification.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Global variables</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="NOTIFY_EXPIRES_DEFAULT" class="public" href="../libnotify/notification/NOTIFY_EXPIRES_DEFAULT.html">
+								<code>NOTIFY_EXPIRES_DEFAULT</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><span class="kwd">const</span><span class="pun">(</span><span class="typ">int</span><span class="pun">)</span></code>
+						</td>
+						<td>The default expiration time on a notification.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="NOTIFY_EXPIRES_NEVER" class="public" href="../libnotify/notification/NOTIFY_EXPIRES_NEVER.html">
+								<code>NOTIFY_EXPIRES_NEVER</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><span class="kwd">const</span><span class="pun">(</span><span class="typ">int</span><span class="pun">)</span></code>
+						</td>
+						<td>The notification never expires. It stays open until closed by the calling API or the user.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Aliases</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="NotifyActionCallback" class="public" href="../libnotify/notification/NotifyActionCallback.html">
+								<code>NotifyActionCallback</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><a href="../libnotify/notification/NotifyNotification.html"><span class="typ">NotifyNotification</span></a><span class="pun">*</span><span class="pun">, </span><span class="typ">char</span><span class="pun">*</span><span class="pun">, </span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>
